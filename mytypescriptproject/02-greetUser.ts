@@ -4,7 +4,7 @@ function greet(firstName:string):void{
 
 }
 
-greet("kunal");
+greet("muskan 😎");
 
 
 
@@ -12,4 +12,4 @@ let greetUser =(firstName:string)=>{
     console.log(`hello ,${firstName}`)
 }
 
-greetUser("kunal");
+greetUser("mmunna 😎");
