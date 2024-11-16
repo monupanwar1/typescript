@@ -44,19 +44,55 @@
 
 
 
-function greet(name:string):string{
-    return "Hello"+name;
+// function greet(name:string):string{
+//     return "Hello"+name;
+// }
+
+
+// let greeting = greet("kunal")
+// console.log(greeting);
+
+
+
+// function sum(a:number,b:number):number{
+//     return a+b;
+// }
+
+// let anss = sum(10,20);
+// console.log(anss)
+
+
+
+
+
+
+
+interface Address{
+    city: string;
+    country: string;
+    pincode: number;
+}
+interface User {
+    name: string; 
+    age: number;
+    address?: Address; // address is Optional property using "?"
+}
+
+interface Office {
+    address: Address; // interface inside interface
 }
 
 
-let greeting = greet("kunal")
-console.log(greeting);
-
-
-
-function sum(a:number,b:number):number{
-    return a+b;
+let users: User = {
+    name: "kunal",
+    age: 22,
+    address: {
+        city: "haryana",
+        country: "India",
+        pincode: 847105
+    }
 }
 
-let anss = sum(10,20);
-console.log(anss)
+
+
+console.log(users);
