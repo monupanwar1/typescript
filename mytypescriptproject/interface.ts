@@ -67,32 +67,59 @@
 
 
 
-interface Address{
-    city: string;
-    country: string;
-    pincode: number;
-}
-interface User {
-    name: string; 
-    age: number;
-    address?: Address; // address is Optional property using "?"
+// interface Address{
+//     city: string;
+//     country: string;
+//     pincode: number;
+// }
+// interface User {
+//     name: string; 
+//     age: number;
+//     address?: Address; // address is Optional property using "?"
+// }
+
+// interface Office {
+//     address: Address; // interface inside interface
+// }
+
+
+// let users: User = {
+//     name: "kunal",
+//     age: 22,
+//     address: {
+//         city: "haryana",
+//         country: "India",
+//         pincode: 847105
+//     }
+// }
+
+
+
+// console.log(users);
+
+
+
+
+
+
+interface people{
+    name:string,
+    age:number,
+    greet:()=>string
 }
 
-interface Office {
-    address: Address; // interface inside interface
-}
 
+let people:people={
+    name:"kunal",
+    age:20,
+    greet:()=>{
+        return "hii"+people.name;
 
-let users: User = {
-    name: "kunal",
-    age: 22,
-    address: {
-        city: "haryana",
-        country: "India",
-        pincode: 847105
     }
 }
 
 
 
-console.log(users);
+
+let greeting =people.greet();
+console.log(greeting)
