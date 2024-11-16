@@ -1,27 +1,29 @@
-interface TodoType {
-  title: string;
-  description: string;
-  done: boolean;
+import Todo,{TodoType} from "./Todo";
+
+
+
+function App(){
+
+  
+    const todos: TodoType[] = [
+      { title: "Attend 100xDevs Class", description: "In this class we will learn TypeScript.", done: false },
+      { title: "Go to Gym", description: "Let's go gym guys and build your Muscles", done: true },
+      { title: "Write Code", description: "Clean up and improve code quality.", done: false },
+  ];
+
+
+
+  return(
+    <div style={{padding:"20px"}}>
+      <h1>Todo List</h1>
+
+      {todos.map((todo,index)=>(
+        <Todo key ={index} todo={todo}/>
+      ))}
+
+    </div>
+  )
 }
 
-
-
-
-const App = () => {
-
-  const todo:TodoType = {
-    title: "Learn TypeScript",
-    description: "Understand interfaces and props in React.",
-    done: false,
-  }
-
-  return (
-    <div>
-      <h1>{todo.title}</h1>
-      <h1>{todo.description}</h1>
-      <p>{todo.done ? "Completed" : "Not Completed"}</p>
-    </div>
-  );
-};
 
 export default App;
